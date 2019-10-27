@@ -19,7 +19,7 @@
             </div>
             <div class="input-field col s12 l6">
                 <i class="material-icons prefix">vpn_key</i>
-                <select id="sexe">
+                <select id="sexe" name="sexe" required>
                     <option value="" disabled selected>CHOOSE YOUR OPTION</option>
                     <option value="male">MALE</option>
                     <option value="female">FEMALE</option>
@@ -34,17 +34,17 @@
             </div>
             <div class="input-field col s12 l6">
                 <i class="material-icons prefix">vpn_key</i>
-                <input id="password" type="password" class="validate" required name="password" form="signup">
-                <label for="password">PASSWORD</label>
+                <input id="passwordNew" type="password" class="validate" required name="password" form="signup">
+                <label for="passwordNew">PASSWORD</label>
             </div>
             <div class="input-field col s12 l6">
                 <i class="material-icons prefix">vpn_key</i>
-                <input id="retypepassword" type="password" class="validate" required name="retypepassword" form="signup">
-                <label for="retypepassword">RETYPE PASSWORD</label>
+                <input id="confirm_password" type="password" class="validate" required name="retypepassword" form="signup">
+                <label for="confirm_password">RETYPE PASSWORD</label>
             </div>
 
             <div class="input-field col s12 center">
-                <button class="btn-large waves-effect waves-light" type="submit" form="signin">SIGN IN <i class="material-icons right">send</i> </button>
+                <button class="btn-large waves-effect waves-light" type="submit" form="signup">SIGN UP <i class="material-icons right">send</i> </button>
             </div>
         </form>
 
@@ -54,4 +54,17 @@
     $(document).ready(function(){
         $('select').formSelect();
     });
+    var password = document.getElementById("passwordNew")
+        , confirm_password = document.getElementById("confirm_password");
+
+    function validatePassword(){
+        if(password.value != confirm_password.value) {
+            confirm_password.setCustomValidity("Passwords Don't Match");
+        } else {
+            confirm_password.setCustomValidity('');
+        }
+    }
+
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
 </script>
