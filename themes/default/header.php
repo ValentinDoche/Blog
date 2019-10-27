@@ -2,7 +2,7 @@
     <nav>
         <div class="nav-wrapper container">
             <a href="/" class="brand-logo">Logo</a>
-            <a href="#" data-activates="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="/">Blog</a></li>
                 <li><a href="#">About</a></li>
@@ -28,11 +28,16 @@
                     <li class="tab col s6"><a href="#tab2">SIGN UP</a></li>
                 </ul>
             </div>
-            <div id="tab1" class="col s12">
-                SIGN IN
+            <div id="tab1">
+                <?php
+                require 'modal/signin.php';
+                ?>
+
             </div>
             <div id="tab2" class="col s12">
-                SIGN UP
+                <?php
+                require 'modal/signup.php'
+                ?>
             </div>
         </div>
     </div>
@@ -40,7 +45,7 @@
 
 <script>
     $(document).ready(function(){
-        $('.sidenav-trigger').sideNav();
+        $('.sidenav').sidenav();
         $('.modal').modal('');
         $('.modal').modal('open');
         $('.tabs').tabs();
