@@ -8,7 +8,7 @@
                             <li class="tab col l12"><a href="#profile" class="active">PROFILE</a></li>
                             <li class="tab col l12"><a href="#article">ARTICLES</a></li>
                             <li class="tab col l12"><a href="#user">USER</a></li>
-                            <li class="tab col l12"><a href="#test4">SETTINGS</a></li>
+                            <li class="tab col l12"><a href="#setting">SETTINGS</a></li>
                         </ul>
                     </div>
                 </div>
@@ -126,8 +126,34 @@
                     </table>
                 </div>
 
-                <div id="test4" class="col s12">
+                <div id="setting" class="col s12">
+                    <h3>SETTINGS</h3>
 
+                    <form id="settings">
+                        <div class="input-field col s12 l6">
+                            <i class="material-icons prefix">perm_identity</i>
+                            <input id="titre" class="validate" required name="titre" form="settings" value="VALENTIN DOCHE">
+                            <label class="active" for="titre">WEBSITE NAME</label>
+                        </div>
+                        <div class="file-field input-field col s12 l6">
+                            <div class="btn">
+                                <span>LOGO</span>
+                                <input type="file">
+                            </div>
+                            <div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" id="logo">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-field col s12 l6">
+                            <i class="material-icons prefix">format_paint</i>
+                            <select id="theme" name="theme" required form="update">
+                                <option value="default" selected>DEFAULT</option>
+                            </select>
+                            <label for="theme">THEME</label>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -137,19 +163,19 @@
     $(document).ready(function(){
         $('.tabs2').tabs();
     });
-    var password = document.getElementById("update_password")
-        , confirm_password = document.getElementById("update_confirm_password");
+    var password2 = document.getElementById("update_password")
+        , confirm_password2 = document.getElementById("update_confirm_password");
 
-    function validatePassword(){
-        if(password.value != confirm_password.value) {
-            confirm_password.setCustomValidity("Passwords Don't Match");
+    function validatePassword2(){
+        if(password2.value != confirm_password2.value) {
+            confirm_password2.setCustomValidity("Passwords Don't Match");
         } else {
-            confirm_password.setCustomValidity('');
+            confirm_password2.setCustomValidity('');
         }
     }
 
-    password.onchange = validatePassword;
-    confirm_password.onkeyup = validatePassword;
+    password2.onchange = validatePassword2;
+    confirm_password2.onkeyup = validatePassword2;
 
 
 </script>
