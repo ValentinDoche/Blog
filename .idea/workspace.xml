@@ -57,6 +57,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -105,7 +106,7 @@
       <updated>1571874793368</updated>
       <workItem from="1571874794777" duration="530000" />
       <workItem from="1571875350807" duration="1103000" />
-      <workItem from="1572097841706" duration="21864000" />
+      <workItem from="1572097841706" duration="26842000" />
     </task>
     <servers />
   </component>
