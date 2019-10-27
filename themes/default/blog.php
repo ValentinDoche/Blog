@@ -15,8 +15,8 @@
                         <div class="card-action">
                             <a href="#"><span class="left badge hashtag red">test</span></a>
                             <a href="#"><span class="left badge hashtag green">test2</span></a>
-                            <a href="#"><span class="left badge hashtag blue">test3</span></a>
-                            <a href="#" class="right">Lire la suite.</a>
+                            <!--<a href="#"><span class="left badge hashtag blue hide-on-med-and-down">test3</span></a> -->
+                            <a href="#" class="right">Read</a>
                         </div>
 
                     </div><div class="card medium">
@@ -50,7 +50,7 @@
             </div>
             <div class="col l3 hide-on-med-and-down">
                 <div style="position: fixed; width: 14%;" >
-                    <div class="teal lighten-2 card-panel" style="height: 83vh; overflow: hidden;">
+                    <div class="teal lighten-2 card-panel" style="height: 84vh; overflow: hidden; z-index: -1">
                         <img src="/assets/img/portrait.min.jpg" class="circle responsive-img center">
                         <h5 class="center" style="font-weight: bold">Valentin DOCHE</h5>
                         <hr color="black">
