@@ -1,7 +1,7 @@
 <main>
     <div class="container">
         <div class="row">
-            <div class="col s12 l9">
+            <div class="col s12 m12 l12 xl9">
                 <div class="col s12 l12">
                     <div class="card medium">
                         <div class="card-image">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col l3 hide-on-med-and-down">
+            <div class="col xl3 show-on-extra-large">
                 <div style="position: fixed; width: 14%;" >
                     <div class="teal lighten-2 card-panel" style="height: 84vh; overflow: hidden; z-index: -1">
                         <img src="/assets/img/portrait.min.jpg" class="circle responsive-img center">
