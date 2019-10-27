@@ -1,7 +1,7 @@
 <main style="margin-top: 1em">
     <div class="container z-depth-2">
         <div class="row">
-            <div class="col l3">
+            <div class="col l3 hide-on-med-and-down">
                 <div class="col l12">
                     <div class="tabs-vertical">
                         <ul class="tabs2">
@@ -129,7 +129,8 @@
                 <div id="setting" class="col s12">
                     <h3>SETTINGS</h3>
 
-                    <form id="settings">
+                    <form id="settings" method="post" action="">
+                        <p class="underline">GENERAL : </p>
                         <div class="input-field col s12 l6">
                             <i class="material-icons prefix">perm_identity</i>
                             <input id="titre" class="validate" required name="titre" form="settings" value="VALENTIN DOCHE">
@@ -142,16 +143,57 @@
                             </div>
                             <div>
                                 <div class="file-path-wrapper">
-                                    <input class="file-path validate" type="text" id="logo">
+                                    <input class="file-path validate" type="text" id="logo" required>
                                 </div>
                             </div>
                         </div>
                         <div class="input-field col s12 l6">
                             <i class="material-icons prefix">format_paint</i>
-                            <select id="theme" name="theme" required form="update">
+                            <select id="theme" name="theme" required form="settings">
                                 <option value="default" selected>DEFAULT</option>
                             </select>
                             <label for="theme">THEME</label>
+                        </div>
+                        <div class="input-field col s12 l6">
+                            <i class="material-icons prefix">format_paint</i>
+                            <select id="signUp_settings" name="signUp_settings" required form="settings">
+                                <option value="enabled" selected>YES</option>
+                                <option value="disabled">NO</option>
+                            </select>
+                            <label for="theme">ALLOW USERS TO SIGN UP</label>
+                        </div>
+
+                        <p class="underline">SIDEBAR : </p>
+                        <div class="file-field input-field col s12 l6">
+                            <div class="btn">
+                                <span>IMAGE</span>
+                                <input type="file">
+                            </div>
+                            <div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" id="sideImg" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-field col s12 l6">
+                            <i class="material-icons prefix">perm_identity</i>
+                            <input id="sidebar_titre" class="validate" required name="titre" form="settings" value="VALENTIN DOCHE">
+                            <label class="active" for="sidebar_titre">SIDEBAR NAME</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">vpn_key</i>
+                            <textarea id="description" class="materialize-textarea" required name="description" form="settings" data-length="360"></textarea>
+                            <label for="description">DESCRIPTION</label>
+                        </div>
+                        <p class="underline">CONTACT : </p>
+                        <div class="input-field col s12 l6">
+                            <i class="material-icons prefix">perm_identity</i>
+                            <input id="contact_mail" class="validate" required name="titre" form="settings" value="CONTACT@VALENTINDOCHE.COM">
+                            <label class="active" for="contact_mail">CONTACT E-MAIL</label>
+                        </div>
+
+                        <div class="input-field col s12 center">
+                            <button class="btn-large waves-effect waves-light" type="submit" form="settings">UPDATE SETTINGS<i class="material-icons right">send</i> </button>
                         </div>
                     </form>
                 </div>
@@ -162,6 +204,7 @@
 <script>
     $(document).ready(function(){
         $('.tabs2').tabs();
+        $('#description').characterCounter();
     });
     var password2 = document.getElementById("update_password")
         , confirm_password2 = document.getElementById("update_confirm_password");
@@ -176,6 +219,8 @@
 
     password2.onchange = validatePassword2;
     confirm_password2.onkeyup = validatePassword2;
+
+    M.textareaAutoResize($('#description'));
 
 
 </script>
