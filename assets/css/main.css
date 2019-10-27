@@ -160,3 +160,7 @@ main {
     cursor: default; }
 .tabs-vertical .indicator {
     display: none; }
+
+.underline{
+    text-decoration: underline;
+}
