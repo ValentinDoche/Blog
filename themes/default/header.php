@@ -5,9 +5,16 @@
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="/">Blog</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#modal1" class="btn modal-trigger">SIGN IN</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <?php
+                if ($_SESSION['isConnected']){ ?>
+                    <li><a href="/admin.php" class="btn">MON COMPTE</a></li>
+                <?php }else{ ?>
+                    <li><a href="#modal1" class="btn modal-trigger">SIGN IN</a></li>
+                <?php } ?>
+
+
             </ul>
         </div>
     </nav>
@@ -15,9 +22,24 @@
 <ul class="sidenav" id="mobile-demo">
     <li><a href="/" class="brand-logo center" style="font-size: 24px;">Logo</a></li>
     <li><a href="/">Blog</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
-    <li><a href="#modal1" class="btn modal-trigger">SIGN IN</a></li>
+    <li><a href="/about.php">About</a></li>
+    <li><a href="/contact.php">Contact</a></li>
+    <?php
+    if ($_SESSION['isConnected']){
+        echo '<li><a href="/function/mobileMenu.php?page=profile">Profile</a></li>';
+        if ($_SESSION['role'] == 'writer' || $_SESSION['role'] == 'admin'){
+            echo '<li><a href="/function/mobileMenu.php?page=articles">Articles</a></li>';
+        }if ($_SESSION['role'] == 'admin'){
+            echo '<li><a href="/function/mobileMenu.php?page=user">User</a></li>';
+            echo '<li><a href="/function/mobileMenu.php?page=setting">Settings</a></li>';
+        }
+        echo '<li class="center col l12"><a href="/function/signOut.php" class="btn red">SIGN OUT</a></li>';
+
+     }else{
+        echo '<li><a href="#modal1" class="btn modal-trigger">SIGN IN</a></li>';
+    }
+    ?>
+
 </ul>
 <div id="modal1" class="modal">
     <div class="modal-content">
@@ -53,33 +75,3 @@
     });
 
 </script>
-<!--<div class="navbar-fixed">
-    <nav>
-        <div class="nav-wrapper container">
-            <a href="#" class="brand-logo">Logo</a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#" class="btn">SIGN IN</a></li>
-            </ul>
-
-        </div>
-    </nav>
-    <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Blog</a></li>
-        <li><a href="badges.html">About</a></li>
-        <li><a href="collapsible.html">Contact</a></li>
-        <li><a href="mobile.html" class="btn">SIGN IN</a></li>
-    </ul>
-</div>
-
-
-<script>
-    $(document).ready(function() {
-
-        $(".button-collapse").sideNav();
-
-    });
-</script> -->
