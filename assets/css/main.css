@@ -164,3 +164,6 @@ main {
 .underline{
     text-decoration: underline;
 }
+.about_photo{
+    max-height: 30vh;
+}
