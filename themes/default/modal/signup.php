@@ -1,46 +1,46 @@
 <div class="row">
     <div class="col l8 offset-l2 s12">
         <p class="center" style="font-size: 16px; font-weight: bold">WELCOME</p>
-        <form method="post" action="login" name="signup" id="signup">
+        <form method="post" action="function/signUp.php" name="signup" id="signup">
             <div class="input-field col s12 l6">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="name" type="text" class="validate" required name="name" form="signup">
-                <label for="name">NAME</label>
+                <input id="signup_name" type="text" class="validate" required name="signup_name" form="signup">
+                <label for="signup_name">NAME</label>
             </div>
             <div class="input-field col s12 l6">
                 <i class="material-icons prefix">vpn_key</i>
-                <input id="surname" type="text" class="validate" required name="surname" form="signup">
-                <label for="surname">SURNAME</label>
+                <input id="signup_surname" type="text" class="validate" required name="signup_surname" form="signup">
+                <label for="signup_surname">SURNAME</label>
             </div>
             <div class="input-field col s12 l6">
                 <i class="material-icons prefix">vpn_key</i>
-                <input id="newPseudo" type="text" class="validate" required name="newPseudo" form="signup">
-                <label for="newPseudo">PSEUDO</label>
+                <input id="signup_pseudo" type="text" class="validate" required name="signup_pseudo" form="signup">
+                <label for="signup_pseudo">PSEUDO</label>
             </div>
             <div class="input-field col s12 l6">
                 <i class="material-icons prefix">vpn_key</i>
-                <select id="sexe" name="sexe" required>
+                <select id="signup_sexe" name="signup_sexe" required>
                     <option value="" disabled selected>CHOOSE YOUR OPTION</option>
                     <option value="male">MALE</option>
                     <option value="female">FEMALE</option>
                     <option value="other">OTHER</option>
                 </select>
-                <label for="sexe">SEXE</label>
+                <label for="signup_sexe">SEXE</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">vpn_key</i>
-                <input id="email" type="email" class="validate" required name="email" form="signup">
-                <label for="email">E-MAIL</label>
+                <input id="signup_email" type="email" class="validate" required name="signup_email" form="signup">
+                <label for="signup_email">E-MAIL</label>
             </div>
             <div class="input-field col s12 l6">
                 <i class="material-icons prefix">vpn_key</i>
-                <input id="passwordNew" type="password" class="validate" required name="password" form="signup">
-                <label for="passwordNew">PASSWORD</label>
+                <input id="signup_password" type="password" class="validate" required name="signup_password" form="signup">
+                <label for="signup_password">PASSWORD</label>
             </div>
             <div class="input-field col s12 l6">
                 <i class="material-icons prefix">vpn_key</i>
-                <input id="confirm_password" type="password" class="validate" required name="retypepassword" form="signup">
-                <label for="confirm_password">RETYPE PASSWORD</label>
+                <input id="signup_confirm_password" type="password" class="validate" required name="signup_confirm_password" form="signup">
+                <label for="signup_confirm_password">RETYPE PASSWORD</label>
             </div>
 
             <div class="input-field col s12 center">
@@ -54,17 +54,17 @@
     $(document).ready(function(){
         $('select').formSelect();
     });
-    var password = document.getElementById("passwordNew")
-        , confirm_password = document.getElementById("confirm_password");
+    var signup_password = document.getElementById("signup_password")
+        , signup_confirm_password = document.getElementById("signup_confirm_password");
 
     function validatePassword(){
-        if(password.value != confirm_password.value) {
-            confirm_password.setCustomValidity("Passwords Don't Match");
+        if(signup_password.value != signup_confirm_password.value) {
+            signup_confirm_password.setCustomValidity("Passwords Don't Match");
         } else {
-            confirm_password.setCustomValidity('');
+            signup_confirm_password.setCustomValidity('');
         }
     }
 
-    password.onchange = validatePassword;
-    confirm_password.onkeyup = validatePassword;
+    signup_password.onchange = validatePassword;
+    signup_confirm_password.onkeyup = validatePassword;
 </script>
