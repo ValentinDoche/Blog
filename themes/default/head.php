@@ -1,4 +1,4 @@
-<?php session_start() ?>
+<?php session_start(); session_regenerate_id(); ?>
 <meta charset="UTF-8">
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -23,6 +23,8 @@
                 echo "M.toast({html: 'CONNEXION REUSSITE', classes: 'rounded green-text', displayLength: 10000});";
             }elseif (isset($_GET['signout']) && $_GET['signout']){
                 echo "M.toast({html: 'DECONNEXION', classes: 'rounded red-text', displayLength: 10000});";
+            }elseif (isset($_GET['update_confirm']) && $_GET['update_confirm']){
+                echo "M.toast({html: 'WEBSITE SETTINGS UPDATED', classes: 'rounded green-text', displayLength: 10000});";
             }
         ?>
     });

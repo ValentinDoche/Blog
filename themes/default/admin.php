@@ -157,7 +157,7 @@ if ($_SESSION['isConnected']){ ?>
     <script>
         $(document).ready(function(){
             $('.tabs2').tabs();
-            $('#description, #about_text').characterCounter();
+
         });
         var password2 = document.getElementById("update_password")
             , confirm_password2 = document.getElementById("update_confirm_password");
@@ -173,7 +173,7 @@ if ($_SESSION['isConnected']){ ?>
         password2.onchange = validatePassword2;
         confirm_password2.onkeyup = validatePassword2;
 
-        M.textareaAutoResize($('#description'));
+
 
 
     </script>

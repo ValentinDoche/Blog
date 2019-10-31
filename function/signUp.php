@@ -7,7 +7,7 @@ $email = $_POST['signup_email'];
 $password = password_hash($_POST['signup_password'], PASSWORD_BCRYPT);
 
 $bdd = [$name, $surname, $pseudo, $sexe, $email, $password];
-if (isset($_POST['signup_name'])){
+if ($_COOKIE['PHPSESSID'] == session_id()){
 
     include_once 'websiteInfo.php';
     include_once 'database.php';
@@ -31,7 +31,7 @@ if (isset($_POST['signup_name'])){
         $headers = 'From: noreply@'.WEBSITE_NAME;
 
         mail($email, "INSCRIPTION",$content_mail, $headers);
-
+        session_regenerate_id();
         header('location:/?validate_signup=true');
 
     }

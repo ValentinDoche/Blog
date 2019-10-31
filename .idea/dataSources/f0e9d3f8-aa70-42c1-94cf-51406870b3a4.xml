@@ -978,12 +978,12 @@
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="238" name="sidebar_image">
+    <column id="245" parent="238" name="sidebar_name">
       <Position>6</Position>
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="238" name="sidebar_name">
+    <column id="246" parent="238" name="sidebar_image">
       <Position>7</Position>
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>

@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col l8 offset-l2 s12">
         <p class="center" style="font-size: 16px; font-weight: bold">WELCOME</p>
-        <form method="post" action="function/signUp.php" name="signup" id="signup">
+        <form method="post" action="/function/signUp.php" name="signup" id="signup">
             <div class="input-field col s12 l6">
                 <i class="material-icons prefix">account_circle</i>
                 <input id="signup_name" type="text" class="validate" required name="signup_name" form="signup">
@@ -67,4 +67,5 @@
 
     signup_password.onchange = validatePassword;
     signup_confirm_password.onkeyup = validatePassword;
+
 </script>
