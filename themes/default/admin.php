@@ -85,22 +85,9 @@ if ($_SESSION['isConnected']){ ?>
                                 <h3><a class="btn-floating btn-large waves-effect waves-light red right modal-trigger" href="#modal2"><i class="material-icons">add</i></a></h3>
                             </div>
                             <div class="col s12">
-                                <div class="card small">
-                                    <div class="card-image">
-                                        <img src="/assets/img/image1.jpg" style="transform: translateY(-25%); filter: blur(1.5px)">
-                                        <span class="card-title" style="font-weight: 600">TEST</span>
-                                    </div>
-                                    <div class="card-content">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores atque, corporis cumque debitis dignissimos ducimus eos ex facilis fugit illum ipsam itaque molestias nesciunt nobis nostrum odit optio perferendis quaerat quas quos reprehenderit repudiandae sed vel voluptates. Commodi consequuntur, ex fuga id libero nesciunt officia officiis porro repudiandae sequi sint tempora, vel, voluptatum. Accusamus at atque blanditiis dolor dolorum, facere hic illo incidunt iure, nihil nobis officia omnis perspiciatis quae repellendus sint suscipit voluptates voluptatum. Aliquam aspernatur, atque blanditiis consectetur cum, dignissimos earum impedit ipsam maxime nisi obcaecati omnis provident quae, quia soluta sunt tenetur ut vel velit vero. Excepturi expedita explicabo fuga in nisi numquam repellat, sint vel! Accusamus cumque dolorum ea eius facilis id in magni minima minus, nesciunt obcaecati perferendis, qui repellendus rerum sed. Commodi consectetur cumque debitis delectus doloremque doloribus eaque eligendi enim eos ...
-
-                                    </div>
-                                    <div class="card-action">
-                                        <a href="#"><span class="left badge hashtag red">test</span></a>
-                                        <a href="#"><span class="left badge hashtag green">test2</span></a>
-                                        <!--<a href="#"><span class="left badge hashtag blue hide-on-med-and-down">test3</span></a> -->
-                                        <a href="#" class="right">Read</a>
-                                    </div>
-                                </div>
+                                <?php
+                                include "articles.php";
+                                ?>
                             </div>
 
                         </div>
@@ -108,7 +95,9 @@ if ($_SESSION['isConnected']){ ?>
                         <!-- Modal -->
                         <div id="modal2" class="modal">
                             <div class="modal-content">
-                                <?php require 'modal/news_articles.php' ?>
+                                <?php
+                                require 'modal/news_articles.php';
+                                ?>
                             </div>
                         </div>
 
