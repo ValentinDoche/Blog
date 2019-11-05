@@ -80,19 +80,23 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\valen\Documents\GitHub\Blog\assets\js" />
+      <recent name="C:\Users\valen\Documents\GitHub\Blog\assets\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\valen\Documents\GitHub\Blog\lib" />
       <recent name="C:\Users\valen\Documents\GitHub\Blog\function" />
       <recent name="C:\Users\valen\Documents\GitHub\Blog\function\private" />
       <recent name="C:\Users\valen\Documents\GitHub\Blog\assets\img" />
       <recent name="C:\Users\valen\Documents\GitHub\Blog\assets\css" />
-      <recent name="C:\Users\valen\Documents\GitHub\Blog\assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -158,7 +162,8 @@
       <workItem from="1572540964813" duration="1573000" />
       <workItem from="1572867344553" duration="2328000" />
       <workItem from="1572869786839" duration="1952000" />
-      <workItem from="1572951750320" duration="1045000" />
+      <workItem from="1572951750320" duration="3535000" />
+      <workItem from="1572960631335" duration="17217000" />
     </task>
     <servers />
   </component>
