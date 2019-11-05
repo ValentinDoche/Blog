@@ -82,7 +82,7 @@ if ($_SESSION['isConnected']){ ?>
                                 <h3>ARTICLES</h3>
                             </div>
                             <div class="col s6">
-                                <h3><a class="btn-floating btn-large waves-effect waves-light red right" ><i class="material-icons">add</i></a></h3>
+                                <h3><a class="btn-floating btn-large waves-effect waves-light red right modal-trigger" href="#modal2"><i class="material-icons">add</i></a></h3>
                             </div>
                             <div class="col s12">
                                 <div class="card small">
@@ -105,6 +105,14 @@ if ($_SESSION['isConnected']){ ?>
 
                         </div>
 
+                        <!-- Modal -->
+                        <div id="modal2" class="modal">
+                            <div class="modal-content">
+                                <?php require 'modal/news_articles.php' ?>
+                            </div>
+                        </div>
+
+
                     <?php }if ($_SESSION['role'] == 'admin'){ ?>
 
                         <div id="user" class="col s12">
@@ -120,6 +128,7 @@ if ($_SESSION['isConnected']){ ?>
                                 </tr>
                                 </thead>
                                 <tbody>
+                                
                                 <tr>
                                     <td>VALENTIN</td>
                                     <td>DOCHE</td>
