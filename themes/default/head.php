@@ -3,9 +3,10 @@
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="assets/css/materialize.css">
-<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/materialize.css">
+<link rel="stylesheet" href="/assets/css/main.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/assets/css/prism.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
 <script>
@@ -25,6 +26,8 @@
                 echo "M.toast({html: 'DECONNEXION', classes: 'rounded red-text', displayLength: 10000});";
             }elseif (isset($_GET['update_confirm']) && $_GET['update_confirm']){
                 echo "M.toast({html: 'WEBSITE SETTINGS UPDATED', classes: 'rounded green-text', displayLength: 10000});";
+            }elseif (isset($_GET['article_add']) && $_GET['article_add']){
+                echo "M.toast({html: 'ARTICLE HAS BEEN ADD', classes: 'rounded green-text', displayLength: 10000});";
             }
         ?>
     });
