@@ -47,6 +47,13 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="@valentindoche.com" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="admin_blog: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="articles: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@valentindoche.com" type="feb32156:DbDataSourceImpl" />
         <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
@@ -151,6 +158,7 @@
       <workItem from="1572540964813" duration="1573000" />
       <workItem from="1572867344553" duration="2328000" />
       <workItem from="1572869786839" duration="1952000" />
+      <workItem from="1572951750320" duration="368000" />
     </task>
     <servers />
   </component>
