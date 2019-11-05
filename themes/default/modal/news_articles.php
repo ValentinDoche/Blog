@@ -3,8 +3,8 @@
         <p class="center" style="font-size: 16px; font-weight: bold">NEW ARTICLES</p>
         <form method="post" action="/function/newArticles.php" id="articles">
             <div class="input-field col s12 l6">
-                <i class="material-icons prefix">vpn_key</i>
-                <input id="articles_title" type="text" class="validate" name="articles_title" form="articles">
+                <i class="material-icons prefix">title</i>
+                <input id="articles_title" type="text" class="validate" name="articles_title" form="articles" required>
                 <label for="articles_title">TITRE</label>
             </div>
             <div class="file-field input-field col s12 l6">
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="input-field col s12">
-                <i class="material-icons prefix">vpn_key</i>
+                <i class="material-icons prefix">description</i>
                 <textarea id="articles_content" class="materialize-textarea" required name="articles_content" form="articles" data-length="10000"></textarea>
                 <label for="articles_content">ARTICLES (MARKDOWN ACCEPTED)</label>
             </div>
