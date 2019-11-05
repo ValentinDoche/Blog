@@ -5,3 +5,4 @@
         </div>
     </div>
 </footer>
+<script src="/assets/js/prism.js"></script>
